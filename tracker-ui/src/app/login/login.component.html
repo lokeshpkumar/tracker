@@ -1,0 +1,32 @@
+<div style="margin-top: 300px;">
+    <div class="p-grid p-dir-col p-align-center">
+        <div class="p-col">
+            <h3 class="first">Tracker - Tracks your progress</h3>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-username" type="text" size="30" pInputText>
+                <label for="float-username">Username</label>
+            </span>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-password" type="password" size="30" pPassword>
+                <label for="float-password">Password</label>
+            </span>
+        </div>
+        <div class="p-col">
+            <div class="p-grid">
+                <div class="p-col">
+                    <p-button icon="pi pi-sign-in" label="Login"></p-button>
+                </div>
+                <div class="p-col ">
+                    <p-button icon="pi pi-user-plus" label="Register" [routerLink]="['/register']"></p-button>
+                </div>
+            </div>
+        </div>
+        <div class="p-col">
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+</div>

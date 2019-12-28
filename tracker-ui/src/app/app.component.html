@@ -1,0 +1,12 @@
+<!-- Menu bar side -->
+
+<div class="icon-bar" *ngIf="currentUser">
+  <a class="active" routerLink="/home"><i class="pi pi-home"></i></a> 
+  <a routerLink="/search"><i class="pi pi-search"></i></a> 
+  <a routerLink="/create"><i class="pi pi-plus"></i></a>
+</div>
+
+<div class="main-content">
+  <app-alert></app-alert>
+  <router-outlet></router-outlet>
+</div>

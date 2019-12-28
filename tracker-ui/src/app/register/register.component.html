@@ -1,0 +1,56 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+<div style="margin-top: 200px;">
+    <div class="p-grid p-dir-col p-align-center">
+        <div class="p-col">
+            <h3 class="first">Register with Tracker</h3>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-email" type="text" size="30" pInputText formControlName="email">
+                <label for="float-email">E-Mail</label>
+            </span>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-username" type="text" size="30" pInputText formControlName="userName">
+                <label for="float-username">Username</label>
+            </span>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-fname" type="text" size="30" pInputText formControlName="firstName">
+                <label for="float-fname">First Name</label>
+            </span>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-lname" type="text" size="30" pInputText formControlName="lastName">
+                <label for="float-lname">Last Name</label>
+            </span>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-password" type="password" size="30" pPassword formControlName="password">
+                <label for="float-password">Password</label>
+            </span>
+        </div>
+        <div class="p-col" style="margin-bottom: 20px;">
+            <span class="ui-float-label">
+                <input id="float-cpassword" type="password" size="30" pPassword formControlName="confirmPassword">
+                <label for="float-cpassword">Confirm Password</label>
+            </span>
+        </div>
+        <div class="p-col">
+            <div class="p-grid">
+                <div class="p-col">
+                    <p-button icon="pi pi-sign-in" label="Register" type="submit"></p-button>
+                </div>
+                <div class="p-col ">
+                    <p-button icon="pi pi-times" label="Cancel" [routerLink]="['/login']"></p-button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
