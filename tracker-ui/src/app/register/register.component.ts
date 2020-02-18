@@ -14,6 +14,8 @@ import { AlertService } from '../services/alert.service';
 export class RegisterComponent implements OnInit {
   
   userForm;
+  registering: boolean;
+  public iconClass: string = "pi pi-sign-in";
 
   constructor(
     private regService: RegistrationService,
@@ -35,16 +37,26 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(customerData) {
+    this.registering = true;
+    setTimeout(()=>{ this.router.navigate([]) }, 4000);
     if ( customerData.password != customerData.confirmPassword ) {
+      this.iconClass = "pi pi-spin pi-spinner";
       console.log("Passwords should match ..");
       this.alertService.error("Passwords do not match");
+      this.registering = false;
     } else {
       // Process checkout data here
       console.warn('Your order has been submitted', customerData);
+      this.iconClass = "pi pi-spin pi-spinner";
+      // this.regService.register(customerData);
       this.userForm.reset();
       this.router.navigate(['/login']);
-      this.alertService.success("Registration successful, try to login");
+      this.alertService.success("Registration successful, try to login...");
     }
   }
+
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
 
 }

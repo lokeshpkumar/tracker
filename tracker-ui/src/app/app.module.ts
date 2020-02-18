@@ -23,6 +23,7 @@ import {PasswordModule} from 'primeng/password';
 import { AlertComponent } from './alert/alert.component';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { ToastModule } from 'primeng/toast';
     BrowserAnimationsModule,
     CheckboxModule,
     PasswordModule,
-    ToastModule
+    ToastModule,
+    ProgressSpinnerModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
